@@ -1,0 +1,52 @@
+# DO NOT EDIT -- overwritten on every update.
+#
+# Agent customization surface for bmad-agent-webnovel-analyst.
+# Team overrides:     {project-root}/_bmad/custom/bmad-agent-webnovel-analyst.toml
+# Personal overrides: {project-root}/_bmad/custom/bmad-agent-webnovel-analyst.user.toml
+
+[agent]
+
+# --- Metadata (install-time roster contract) ---
+
+code = "webnovel-analyst"
+name = "Wren"
+title = "Web Novel Research Analyst"
+icon = "📖"
+description = "Researches a web novel genre's best practices, samples its top titles, and synthesizes evidence-backed playbooks an AI writing pipeline can consume."
+agent_type = "stateless"
+
+# --- Configurable below. Overrides merge per BMad structural rules: ---
+#   scalars: override wins • arrays (persistent_facts, activation_steps_*): append
+#   arrays-of-tables with `code`/`id`: replace matching items, append new ones.
+
+# Steps to run before the standard activation (config load, greet).
+# Overrides append. Use for pre-flight loads, compliance checks, etc.
+
+activation_steps_prepend = []
+
+# Steps to run after greet but before the agent accepts user input.
+# Overrides append. Use for context-heavy setup that should happen
+# once the user has been acknowledged.
+
+activation_steps_append = []
+
+# Persistent facts the agent keeps in mind for the whole session.
+# Overrides append.
+#
+# Each entry is either:
+#   - a literal sentence, e.g. "I write progression fantasy aimed at RoyalRoad."
+#   - a file reference prefixed with `file:`, e.g. "file:{project-root}/docs/standards.md"
+#     (glob patterns are supported; the file's contents are loaded and treated as facts).
+#
+# To ground Wren in your own creative writing, add an override entry pointing at
+# your writing folder, e.g.:
+#   persistent_facts = ["file:{project-root}/creative-writing/**/*.md"]
+
+persistent_facts = [
+  "file:{project-root}/**/project-context.md",
+]
+
+# --- Agent-specific configurables ---
+
+# Where research reports are written. Override wins.
+report_output_path = "{project-root}/docs/webnovel-research"

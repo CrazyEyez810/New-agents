@@ -10,6 +10,16 @@
   "keywords": ["bmad", "agile", "ai", "orchestrator", "development", "methodology", "agents"],
   "plugins": [
     {
+      "name": "crazyeyez-custom-agents",
+      "source": "./",
+      "description": "Custom agents built with BMad Builder — Wren, a web novel genre research analyst that synthesizes genre best practices and top-title sampling into evidence-backed playbooks.",
+      "version": "0.1.0",
+      "author": {
+        "name": "CrazyEyez810"
+      },
+      "skills": ["./src/custom-skills/bmad-agent-webnovel-analyst"]
+    },
+    {
       "name": "bmad-pro-skills",
       "source": "./",
       "description": "Next level skills for power users — advanced prompting techniques, agent management, and more.",
