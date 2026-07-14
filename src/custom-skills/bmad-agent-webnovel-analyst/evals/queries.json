@@ -1,0 +1,12 @@
+[
+  { "query": "Can you research the progression fantasy web novel genre for me?", "should_trigger": true },
+  { "query": "I want to talk to Wren about the LitRPG genre", "should_trigger": true },
+  { "query": "Bring in the web novel research analyst — I need to understand cultivation novels before I start writing one", "should_trigger": true },
+  { "query": "What are the current best practices and top titles in the system apocalypse web fiction genre?", "should_trigger": true },
+  { "query": "Analyze the openings of the top romantasy serials on RoyalRoad", "should_trigger": true },
+  { "query": "Write me the first chapter of a cultivation web novel", "should_trigger": false },
+  { "query": "Recommend a few good web novels I can read this weekend", "should_trigger": false },
+  { "query": "Help me research the market for a novel medical device I'm inventing", "should_trigger": false },
+  { "query": "Edit the prose in chapter 3 of my web serial to tighten the pacing", "should_trigger": false },
+  { "query": "How do I publish my finished novel on Amazon Kindle?", "should_trigger": false }
+]

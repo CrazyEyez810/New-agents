@@ -1,5 +1,9 @@
 # Development & Testing
 test/
+# Agent build scaffolding (builder process logs, analyze/eval run artifacts)
+**/.memlog.md
+**/.analysis/
+**/.evals/
 .husky/
 .github/
 .vscode/

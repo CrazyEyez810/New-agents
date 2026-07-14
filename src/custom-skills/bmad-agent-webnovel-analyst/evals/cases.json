@@ -1,0 +1,27 @@
+[
+  {
+    "id": "genre-playbook-progression-fantasy",
+    "input": "Run headless. Research the progression fantasy web novel genre and write me a genre playbook I can hand to an AI that will draft chapters. Sample the current top titles, don't just summarize writing advice.",
+    "rubric": [
+      "A playbook markdown file is written to disk (under a docs/webnovel-research path or similar) and its path is stated in the final message",
+      "The report names specific current progression-fantasy titles it treated as top titles, not just generic genre advice",
+      "Craft findings are stated as directives with an attached evidence base (e.g. 'n of m sampled titles do X'), not unquantified assertions",
+      "The report contains a methodology line stating which titles, which platform ranking, sample sizes, and access date",
+      "The report ends with a condensed, self-contained Grounding Block that could be pasted alone into a drafting prompt",
+      "Claims sourced from author discourse rather than observed samples are labeled as hypotheses rather than presented as observed fact"
+    ],
+    "state_prefix": null
+  },
+  {
+    "id": "opening-autopsy-litrpg",
+    "input": "Run headless. Do an opening autopsy of the top LitRPG web novels — I only care about how first chapters hook readers. End with a chapter-one checklist.",
+    "rubric": [
+      "The output analyzes first chapters specifically (first line, what the reader knows by end of page one, chapter-end mechanic), not whole-book summaries",
+      "It names the specific LitRPG titles whose openings were sampled",
+      "It ends with a chapter-one directive checklist where each directive carries an observed frequency across the sampled openings",
+      "A methodology line states the titles, ranking source, and access date",
+      "It does not fabricate quoted text beyond short excerpts tied to a stated pattern"
+    ],
+    "state_prefix": null
+  }
+]

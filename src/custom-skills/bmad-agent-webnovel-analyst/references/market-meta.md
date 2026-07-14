@@ -12,4 +12,4 @@ The outcome is packaging and platform intelligence for the genre, written so an 
 
 Algorithm claims — what Rising Stars rewards, how trending weights follows versus views — are rarely verifiable from outside. Report them as hypotheses with their source and recency, never as observed fact. The line between "observed on top titles" and "believed by the author community" must stay visible in every section.
 
-Write the report to `{agent.report_output_path}/<genre>-market-<YYYY-MM-DD>.md`, methodology line included.
+Write the report to `{agent.report_output_path}/<genre>-market-<YYYY-MM-DD>.md`, methodology line included, and state the exact path written on completion.

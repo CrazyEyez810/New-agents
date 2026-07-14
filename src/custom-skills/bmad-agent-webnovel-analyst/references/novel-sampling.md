@@ -12,4 +12,4 @@ The outcome is a craft dossier per title — for titles the user names, or title
 
 Finish one title's dossier before opening the next — findings carry forward, raw text never does. Evidence is quoted in short excerpts only, each tied to the pattern it demonstrates.
 
-Return dossiers inline for quick looks; write them to `{agent.report_output_path}/` when the user wants the artifact.
+Return dossiers inline for quick looks; write them to `{agent.report_output_path}/` when the user wants the artifact, and state the exact path written on completion.
