@@ -89,3 +89,7 @@ build/
 
 # Web bundle release artifacts
 dist/web-bundles/
+
+# Neo Tokyo scene: deps and render output
+neo-tokyo/node_modules/
+neo-tokyo/shots/
