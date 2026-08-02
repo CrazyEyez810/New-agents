@@ -49,18 +49,23 @@ if (!shotKey) {
 }
 
 // Each module returns { group?, update?(t, dt) } — modules own their objects.
+// ?skip=signage,weather omits modules, for isolating render cost.
+const skip = new Set((params.get('skip') ?? '').split(',').filter(Boolean));
 const ctx = { scene, camera, renderer };
-const modules = [
-  buildAtmosphere(ctx),
-  buildGround(ctx),
-  buildCity(ctx),
-  buildSignage(ctx),
-  buildVehicles(ctx),
-  buildWeather(ctx),
-];
+const BUILDERS = {
+  atmosphere: buildAtmosphere,
+  ground: buildGround,
+  architecture: buildCity,
+  signage: buildSignage,
+  vehicles: buildVehicles,
+  weather: buildWeather,
+};
+const modules = Object.entries(BUILDERS)
+  .filter(([name]) => !skip.has(name))
+  .map(([, build]) => build(ctx));
 for (const m of modules) if (m?.group) scene.add(m.group);
 
-const post = buildPostFX(ctx);
+const post = skip.has('postfx') ? null : buildPostFX(ctx);
 
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -87,6 +92,14 @@ function animate() {
   renderFrame(elapsed, fixedTime !== null ? 1 / 60 : dt);
   // Signal the screenshot harness once the scene has rendered enough
   // frames for async textures/shaders to settle.
-  if (++warmupFrames === 30) window.__SCENE_READY__ = true;
+  if (++warmupFrames === 30) {
+    window.__SCENE_STATS__ = {
+      drawCalls: renderer.info.render.calls,
+      triangles: renderer.info.render.triangles,
+      programs: renderer.info.programs?.length ?? 0,
+      textures: renderer.info.memory.textures,
+    };
+    window.__SCENE_READY__ = true;
+  }
 }
 animate();
