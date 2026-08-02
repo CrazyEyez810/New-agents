@@ -1,10 +1,12 @@
 {
   "name": "neo-tokyo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Procedural rainy neo-Tokyo block in Three.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node tools/serve.mjs",
+    "shots": "node tools/screenshot.mjs",
+    "export:gltf": "node tools/export-gltf.mjs"
   },
   "keywords": [],
   "author": "",
