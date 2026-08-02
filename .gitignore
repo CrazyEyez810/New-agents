@@ -90,6 +90,7 @@ build/
 # Web bundle release artifacts
 dist/web-bundles/
 
-# Neo Tokyo scene: deps and render output
+# Neo Tokyo scene: deps, render output and exported binaries
 neo-tokyo/node_modules/
 neo-tokyo/shots/
+neo-tokyo/export/*.glb

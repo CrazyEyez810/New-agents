@@ -1,0 +1,157 @@
+{
+  "file": "export/neo-tokyo.glb",
+  "sizeBytes": 19499108,
+  "sizeMB": 18.6,
+  "seconds": 15.4,
+  "glb": {
+    "version": 2,
+    "total": 19499108,
+    "nodes": 968,
+    "meshNodes": 925,
+    "meshes": 274,
+    "primitives": 274,
+    "materials": 271,
+    "textures": 87,
+    "images": 87,
+    "imageBytes": 16536172,
+    "accessors": 489,
+    "uniqueTriangles": 39664,
+    "drawnTriangles": 60962,
+    "uniqueVertices": 76789,
+    "extensionsUsed": [
+      "KHR_texture_transform",
+      "EXT_materials_bump",
+      "KHR_materials_emissive_strength",
+      "KHR_lights_punctual"
+    ],
+    "extensionsRequired": [],
+    "sceneExtras": {
+      "neoTokyo": {
+        "source": "neo-tokyo/src",
+        "three": "166",
+        "shot": "street",
+        "time": 12,
+        "fog": {
+          "type": "FogExp2",
+          "color": "#30465a",
+          "density": 0.0118
+        },
+        "toneMappingExposure": 1.02,
+        "droppedEffects": {
+          "skydome": 1,
+          "shaft": 3,
+          "inscatter": 5,
+          "scrim": 3,
+          "reflector": 1,
+          "beam": 10,
+          "particles": 5,
+          "weather": 2
+        },
+        "convertedMaterials": {
+          "additive": 266,
+          "unlit": 448,
+          "holo": 4,
+          "wet": 22
+        }
+      }
+    }
+  },
+  "page": {
+    "shot": "street",
+    "time": 12,
+    "frames": 90,
+    "three": "166",
+    "fog": {
+      "type": "FogExp2",
+      "color": "#30465a",
+      "density": 0.0118
+    },
+    "toneMappingExposure": 1.02,
+    "shots": {
+      "street": {
+        "pos": [
+          8,
+          3.2,
+          34
+        ],
+        "look": [
+          0,
+          14,
+          -30
+        ],
+        "fov": 42
+      },
+      "canyon": {
+        "pos": [
+          -14,
+          22,
+          46
+        ],
+        "look": [
+          4,
+          26,
+          -60
+        ],
+        "fov": 48
+      },
+      "aerial": {
+        "pos": [
+          -40,
+          78,
+          70
+        ],
+        "look": [
+          10,
+          20,
+          -40
+        ],
+        "fov": 50
+      },
+      "alley": {
+        "pos": [
+          -6,
+          2.2,
+          12
+        ],
+        "look": [
+          8,
+          10,
+          -40
+        ],
+        "fov": 55
+      }
+    },
+    "before": {
+      "meshes": 196,
+      "instancedMeshes": 16,
+      "instances": 759,
+      "textures": 87
+    },
+    "expanded": {
+      "instancedMeshes": 16,
+      "expanded": 759
+    },
+    "dropped": {
+      "skydome": 1,
+      "shaft": 3,
+      "inscatter": 5,
+      "scrim": 3,
+      "reflector": 1,
+      "beam": 10,
+      "particles": 5,
+      "weather": 2
+    },
+    "converted": {
+      "additive": 266,
+      "unlit": 448,
+      "holo": 4,
+      "wet": 22
+    },
+    "unsupportedLightsRemoved": 2,
+    "warnings": [
+      "THREE.GLTFExporter: Merged metalnessMap and roughnessMap textures."
+    ],
+    "bytes": 19499108
+  },
+  "consoleErrors": []
+}
